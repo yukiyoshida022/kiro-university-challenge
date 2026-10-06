@@ -5,7 +5,7 @@
 支払い回数が最小になる精算方法（誰が誰にいくら払うか）を自動で提示します。
 バックエンド不要・ビルド不要。ブラウザだけで完結し、オフラインでも動作します。
 
-**公開URL:** https://ユーザー名.github.io/warikan-app/
+**公開URL:** https://yukiyoshida022.github.io/warikan-app/
 
 ## 主な機能
 
