@@ -1,0 +1,24 @@
+{
+  "name": "kiro-university-challenge",
+  "version": "1.0.0",
+  "description": "グループ旅行や飲み会など、複数人で費用を分担する場面で使える割り勘計算Webアプリ。 各メンバーの立て替え金額を入力すると、支払い回数が最小になる精算方法を自動計算します。",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukiyoshida022/kiro-university-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yukiyoshida022/kiro-university-challenge/issues"
+  },
+  "homepage": "https://github.com/yukiyoshida022/kiro-university-challenge#readme",
+  "devDependencies": {
+    "fast-check": "^3.22.0"
+  }
+}

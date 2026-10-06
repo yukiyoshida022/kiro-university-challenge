@@ -1,0 +1,654 @@
+{
+  "pbtResults": {
+    "2.2 Property 1: 有効な名前はメンバーリストに追加されることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791173150335
+    },
+    "5.2 Property 8: Settlement が全 Balance を解消することをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791173407961
+    },
+    "5.3 Property 9: Payer と Receiver は常に異なることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791173568978
+    },
+    "2.8 Property 6: 無効な金額は拒否されることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791173660262
+    },
+    "3.3 Property 7: 全 Balance の合計は常に 0 であることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791173771471
+    },
+    "2.3 Property 2: 空白のみの名前は拒否されることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791175144985
+    },
+    "2.4 Property 3: 重複名は拒否されることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791175241991
+    },
+    "2.6 Property 4: メンバー削除時に関連 Payment も消えることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791175335701
+    },
+    "2.11 Property 10: リセット後は空の初期状態になることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791175582314
+    },
+    "3.2 Property 5: 対象者未指定は全員対象と等価であることをテストする": {
+      "status": "passed",
+      "lastRunTimestamp": 1791175644317
+    }
+  },
+  "executionHistory": {
+    "1.1 `index.html` の雛形を作成する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850506
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168857507
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168911567
+      }
+    ],
+    "1.2 `app.js` に AppState と定数の初期定義を作成する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850612
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168860287
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168914486
+      }
+    ],
+    "1.3 `README.md` に GitHub Pages URL と使い方を記載する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850658
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168863015
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168917413
+      }
+    ],
+    "2.1 `addMember(name)` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850714
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168920776
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168962148
+      }
+    ],
+    "2.5 `removeMember(id)` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850738
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168923591
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168964975
+      }
+    ],
+    "2.7 `addPayment(paymentInput)` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850761
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168926358
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168967884
+      }
+    ],
+    "2.9 `removePayment(id)` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850785
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168929316
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168970487
+      }
+    ],
+    "2.10 `resetAll()` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850809
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168931970
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168973120
+      }
+    ],
+    "3.1 `calculateBalances(members, payments)` を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850834
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168975931
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791169476517
+      }
+    ],
+    "4. Checkpoint — Balance 計算の動作確認": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850863
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791169493212
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170450826
+      }
+    ],
+    "5.1 `calculateSettlements(balances)` を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168850885
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170459415
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170487688
+      }
+    ],
+    "6.1 `renderMembers()` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851020
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170493783
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170579419
+      }
+    ],
+    "6.2 Member 追加フォームのイベントハンドラを接続する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851053
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170497121
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170582551
+      }
+    ],
+    "6.3 Member 削除ボタンのイベントハンドラを接続する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851080
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170500292
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170585645
+      }
+    ],
+    "7.1 `renderPayments()` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851106
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170503427
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170588693
+      }
+    ],
+    "7.2 Payment 追加フォームのイベントハンドラを接続する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851179
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170506541
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170591668
+      }
+    ],
+    "7.3 Payment 削除ボタンのイベントハンドラを接続する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851201
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170509644
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170896254
+      }
+    ],
+    "8.1 `renderBalances()` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851222
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170512693
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170937775
+      }
+    ],
+    "9.1 `renderSettlements()` 関数を実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851242
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170515816
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170941168
+      }
+    ],
+    "9.2 「精算を計算する」ボタンのイベントハンドラを接続する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851260
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170518874
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170944530
+      }
+    ],
+    "10.1 リセットボタンのイベントハンドラを実装する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851279
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170522162
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170947791
+      }
+    ],
+    "11.1 `render()` 関数を実装し全サブ描画関数を呼び出す": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851296
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170951836
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170963757
+      }
+    ],
+    "11.2 メンバー追加・削除・Payment 追加・削除の各操作後に `render()` が呼ばれることを確認する": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851312
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170955491
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170966923
+      }
+    ],
+    "12. Final Checkpoint — 全テスト通過と動作確認": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168851331
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170970534
+      },
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791171128220
+      }
+    ],
+    "1. プロジェクト構成と基本ファイルの作成": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168917462
+      }
+    ],
+    "2. データモデルとバリデーション関数の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791168973142
+      }
+    ],
+    "3. 残高計算ロジックの実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791169476550
+      }
+    ],
+    "5. 精算アルゴリズム（Minimum Transfers）の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170487733
+      }
+    ],
+    "6. UI — Member Panel の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170585712
+      }
+    ],
+    "7. UI — Payment Panel の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170896324
+      }
+    ],
+    "8. UI — Balance Panel の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170937825
+      }
+    ],
+    "9. UI — Settlement Panel の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170944570
+      }
+    ],
+    "10. UI — Header とリセット機能の実装": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170947824
+      }
+    ],
+    "11. `render()` 統合関数の実装と配線": [
+      {
+        "executionId": "9d16ed48-fb62-4a92-8e69-40f4c3f739d8",
+        "chatSessionId": "sess_58520f23-bb27-443e-84d1-bc5d3ee94fa9",
+        "timestamp": 1791170966981
+      }
+    ],
+    "2.2 Property 1: 有効な名前はメンバーリストに追加されることをテストする": [
+      {
+        "executionId": "e8fdbab0-558e-4ec8-96cc-58d259f16112",
+        "chatSessionId": "sess_e7860621-d087-44b8-8310-a2665c650498",
+        "timestamp": 1791173046467
+      },
+      {
+        "executionId": "e8fdbab0-558e-4ec8-96cc-58d259f16112",
+        "chatSessionId": "sess_e7860621-d087-44b8-8310-a2665c650498",
+        "timestamp": 1791173160249
+      }
+    ],
+    "5.2 Property 8: Settlement が全 Balance を解消することをテストする": [
+      {
+        "executionId": "45d30035-6f1f-4029-9bc5-eef103427261",
+        "chatSessionId": "sess_11e5054b-d006-45b8-b969-79294c4e7c63",
+        "timestamp": 1791173213585
+      },
+      {
+        "executionId": "45d30035-6f1f-4029-9bc5-eef103427261",
+        "chatSessionId": "sess_11e5054b-d006-45b8-b969-79294c4e7c63",
+        "timestamp": 1791173416019
+      }
+    ],
+    "5.3 Property 9: Payer と Receiver は常に異なることをテストする": [
+      {
+        "executionId": "f0a38051-4916-433e-8b55-60d7f0cdc760",
+        "chatSessionId": "sess_bc6e3279-979e-4873-b02f-9bcbfc386579",
+        "timestamp": 1791173493016
+      },
+      {
+        "executionId": "f0a38051-4916-433e-8b55-60d7f0cdc760",
+        "chatSessionId": "sess_bc6e3279-979e-4873-b02f-9bcbfc386579",
+        "timestamp": 1791173577276
+      }
+    ],
+    "2.8 Property 6: 無効な金額は拒否されることをテストする": [
+      {
+        "executionId": "a341b476-9991-4971-834e-4d32a5a0337b",
+        "chatSessionId": "sess_1a54ffbe-a760-4e8a-857f-8830b09dfc76",
+        "timestamp": 1791173612353
+      },
+      {
+        "executionId": "a341b476-9991-4971-834e-4d32a5a0337b",
+        "chatSessionId": "sess_1a54ffbe-a760-4e8a-857f-8830b09dfc76",
+        "timestamp": 1791173667061
+      }
+    ],
+    "3.3 Property 7: 全 Balance の合計は常に 0 であることをテストする": [
+      {
+        "executionId": "80741b30-2999-44c3-abf5-bdc50c941014",
+        "chatSessionId": "sess_4cf80381-6e87-4af2-a00c-04c049dc277e",
+        "timestamp": 1791173729550
+      },
+      {
+        "executionId": "80741b30-2999-44c3-abf5-bdc50c941014",
+        "chatSessionId": "sess_4cf80381-6e87-4af2-a00c-04c049dc277e",
+        "timestamp": 1791173780182
+      }
+    ],
+    "2.3 Property 2: 空白のみの名前は拒否されることをテストする": [
+      {
+        "executionId": "9cc31d32-90f4-406e-9f9b-cd30d117fc75",
+        "chatSessionId": "sess_2120e362-ef84-4dd6-93c7-b253bb046020",
+        "timestamp": 1791174066410
+      },
+      {
+        "executionId": "9cc31d32-90f4-406e-9f9b-cd30d117fc75",
+        "chatSessionId": "sess_2120e362-ef84-4dd6-93c7-b253bb046020",
+        "timestamp": 1791175078628
+      },
+      {
+        "executionId": "03cc7ef5-361b-489c-a738-189233bc22e6",
+        "chatSessionId": "sess_c59ed190-1ed0-4759-8d75-af97a6e99160",
+        "timestamp": 1791175084090
+      },
+      {
+        "executionId": "03cc7ef5-361b-489c-a738-189233bc22e6",
+        "chatSessionId": "sess_c59ed190-1ed0-4759-8d75-af97a6e99160",
+        "timestamp": 1791175153346
+      }
+    ],
+    "2.4 Property 3: 重複名は拒否されることをテストする": [
+      {
+        "executionId": "41cf3559-4ec7-4ae8-98c6-cbe87d641720",
+        "chatSessionId": "sess_f9a6aeab-f384-4caa-9350-dd73fca14ae8",
+        "timestamp": 1791175158985
+      },
+      {
+        "executionId": "41cf3559-4ec7-4ae8-98c6-cbe87d641720",
+        "chatSessionId": "sess_f9a6aeab-f384-4caa-9350-dd73fca14ae8",
+        "timestamp": 1791175250503
+      }
+    ],
+    "2.6 Property 4: メンバー削除時に関連 Payment も消えることをテストする": [
+      {
+        "executionId": "2866d32e-8472-488a-afe0-832d205d5b0d",
+        "chatSessionId": "sess_42212d48-b94c-42ea-a9a6-29f5fb9b7afc",
+        "timestamp": 1791175257031
+      },
+      {
+        "executionId": "2866d32e-8472-488a-afe0-832d205d5b0d",
+        "chatSessionId": "sess_42212d48-b94c-42ea-a9a6-29f5fb9b7afc",
+        "timestamp": 1791175347518
+      }
+    ],
+    "2.11 Property 10: リセット後は空の初期状態になることをテストする": [
+      {
+        "executionId": "a56d83b0-c7f3-4bc6-8c8c-b91877975c97",
+        "chatSessionId": "sess_01823e2b-116c-4294-a78a-36d04fafe86c",
+        "timestamp": 1791175465007
+      },
+      {
+        "executionId": "a56d83b0-c7f3-4bc6-8c8c-b91877975c97",
+        "chatSessionId": "sess_01823e2b-116c-4294-a78a-36d04fafe86c",
+        "timestamp": 1791175589458
+      }
+    ],
+    "3.2 Property 5: 対象者未指定は全員対象と等価であることをテストする": [
+      {
+        "executionId": "b9ef8996-6e2b-47fa-9211-bc4bee272d2c",
+        "chatSessionId": "sess_06d0110c-f495-4e50-a0f8-074ea38edfd1",
+        "timestamp": 1791175595195
+      },
+      {
+        "executionId": "b9ef8996-6e2b-47fa-9211-bc4bee272d2c",
+        "chatSessionId": "sess_06d0110c-f495-4e50-a0f8-074ea38edfd1",
+        "timestamp": 1791175652074
+      }
+    ]
+  }
+}

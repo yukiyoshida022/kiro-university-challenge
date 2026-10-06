@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>割り勘計算</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 16px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    /* Panels */
+    .panel {
+      background: #fff;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .panel h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+
+    /* Forms */
+    .input-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .input-row input,
+    .input-row select {
+      flex: 1;
+      min-width: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #fafafa;
+      transition: border-color 0.15s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+      outline: none;
+      border-color: #4a90d9;
+      background: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    /* Buttons */
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    .btn-primary {
+      background: #4a90d9;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .btn-danger {
+      background: #e05c5c;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    .btn-success {
+      background: #4caf50;
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    /* Error messages */
+    .error-message {
+      color: #d32f2f;
+      font-size: 0.85rem;
+      margin-top: 6px;
+      min-height: 1.2em;
+    }
+
+    /* Lists */
+    .item-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .item-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: #f9f9f9;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .item-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-list .item-text {
+      flex: 1;
+      min-width: 0;
+      word-break: break-word;
+    }
+
+    .item-list .delete-btn {
+      background: none;
+      border: none;
+      color: #999;
+      font-size: 1rem;
+      padding: 2px 6px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .item-list .delete-btn:hover {
+      color: #e05c5c;
+    }
+
+    /* Checkboxes area */
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 8px;
+      background: #f9f9f9;
+      border-radius: 6px;
+      border: 1px solid #e0e0e0;
+      min-height: 40px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.9rem;
+      color: #333;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: auto;
+      accent-color: #4a90d9;
+    }
+
+    .checkbox-hint {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    /* Balance list */
+    #balance-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    #balance-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: #f9f9f9;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    #balance-list .positive {
+      color: #388e3c;
+      font-weight: 600;
+    }
+
+    #balance-list .negative {
+      color: #d32f2f;
+      font-weight: 600;
+    }
+
+    #balance-list .zero {
+      color: #757575;
+    }
+
+    /* Settlement list */
+    #settlement-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    #settlement-list li {
+      padding: 10px 12px;
+      background: #e8f5e9;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    #settlement-list li.no-settlement {
+      background: #f9f9f9;
+      color: #757575;
+      text-align: center;
+    }
+
+    /* Payment list items — slightly more detail */
+    #payment-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    #payment-list li .item-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    #payment-list li .item-detail {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    /* Responsive: narrow screens */
+    @media (max-width: 400px) {
+      .input-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>割り勘計算</h1>
+      <button id="reset-btn" class="btn-secondary">リセット</button>
+    </header>
+
+    <!-- Member Panel -->
+    <section class="panel" id="member-panel">
+      <h2>メンバー</h2>
+      <div class="form-group">
+        <label for="member-name-input">名前</label>
+        <div class="input-row">
+          <input type="text" id="member-name-input" placeholder="名前を入力" maxlength="50" />
+          <button id="add-member-btn" class="btn-primary">追加</button>
+        </div>
+        <div class="error-message" id="member-error" role="alert" aria-live="polite"></div>
+      </div>
+      <ul class="item-list" id="member-list" aria-label="メンバー一覧"></ul>
+    </section>
+
+    <!-- Payment Panel -->
+    <section class="panel" id="payment-panel">
+      <h2>支払い</h2>
+
+      <div class="form-group">
+        <label for="payer-select">支払者</label>
+        <select id="payer-select" aria-label="支払者を選択">
+          <option value="">-- 支払者を選択 --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="payment-amount-input">金額（円）</label>
+        <input type="number" id="payment-amount-input" inputmode="numeric" placeholder="例: 3000" min="1" />
+      </div>
+
+      <div class="form-group">
+        <label for="payment-description-input">用途</label>
+        <input type="text" id="payment-description-input" placeholder="例: 夕食" maxlength="100" />
+      </div>
+
+      <div class="form-group">
+        <label>割り勘対象者</label>
+        <div class="checkbox-group" id="target-checkboxes" role="group" aria-label="割り勘対象者"></div>
+        <p class="checkbox-hint">未選択の場合は全員を対象とします</p>
+      </div>
+
+      <button id="add-payment-btn" class="btn-primary" style="width:100%">支払いを追加</button>
+      <div class="error-message" id="payment-error" role="alert" aria-live="polite"></div>
+
+      <ul class="item-list" id="payment-list" aria-label="支払い一覧"></ul>
+    </section>
+
+    <!-- Balance Panel -->
+    <section class="panel" id="balance-panel">
+      <h2>残高</h2>
+      <ul id="balance-list" aria-label="残高一覧"></ul>
+    </section>
+
+    <!-- Settlement Panel -->
+    <section class="panel" id="settlement-panel">
+      <h2>精算</h2>
+      <button id="calculate-btn" class="btn-success">精算を計算する</button>
+      <ul id="settlement-list" aria-label="精算結果"></ul>
+    </section>
+
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

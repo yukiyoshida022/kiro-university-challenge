@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "JS構文チェック（保存時）",
+      "trigger": "PostFileSave",
+      "description": ".jsファイル保存時にnode --checkで構文チェックを実行する",
+      "matcher": "\\.js$",
+      "action": {
+        "type": "command",
+        "command": "FILE=$(echo \"$STDIN\" | python3 -c \"import sys,json; print(json.load(sys.stdin).get('filePath',''))\" 2>/dev/null); if [ -n \"$FILE\" ]; then node --check \"$FILE\" && echo \"✅ 構文OK: $FILE\" || echo \"❌ 構文エラー: $FILE\"; fi"
+      }
+    }
+  ]
+}
